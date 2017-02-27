@@ -21,6 +21,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Test Android jar comes with unimplemented methods that throw exceptions by default. This
+    // option forces the methods to return default values instead. Required for static methods,
+    // such as TextUtils, as those cannot be mocked with Mockito.
+    // Refer http://tools.android.com/tech-docs/unit-testing-support#TOC-Method-...-not-mocked.-
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 // apply from: '../gradle-mvn-push.gradle'
@@ -47,5 +55,15 @@ dependencies {
     compile 'com.android.support:support-annotations:23.1.1'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
+
+    // Dependencies for unit tests which reside in the "tests" src folder.
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-core:1.3'
+    testCompile 'org.mockito:mockito-core:1.10.8'
+    testCompile 'org.powermock:powermock-api-mockito:1.6.4'
+    testCompile 'org.powermock:powermock-module-junit4-rule-agent:1.6.4'
+    testCompile 'org.powermock:powermock-module-junit4-rule:1.6.4'
+    testCompile 'org.powermock:powermock-module-junit4:1.6.4'
+    testCompile 'org.json:json:20090211'
 }
 
