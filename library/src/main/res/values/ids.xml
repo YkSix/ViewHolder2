@@ -1,0 +1,4 @@
+<resources>
+    <item name="tag_viewholder" type="id" />
+    <item name="tag_bundle_data" type="id" />
+</resources>
