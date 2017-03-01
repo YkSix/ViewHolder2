@@ -1,4 +1,4 @@
-package com.ericluapp.android.libs;
+package com.ericluapp.libs;
 
 import android.content.Context;
 import android.content.res.Resources;

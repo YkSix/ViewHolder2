@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.ericluapp.android.libs'
-version = "1.0.1"
+group = 'com.ericluapp.libs'
+version = "0.0.1"
 def lib_version_name = version
-def lib_artifact_Id = "viewholder"
+def lib_artifact_Id = "viewholder2"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -83,8 +83,8 @@ bintray {
         }
 
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/YkSix/ViewHolder.git'
-        websiteUrl = 'https://github.com/YkSix/ViewHolder'
+        vcsUrl = 'https://github.com/YkSix/ViewHolder2.git'
+        websiteUrl = 'https://github.com/YkSix/ViewHolder2'
         publish = true
     }
 

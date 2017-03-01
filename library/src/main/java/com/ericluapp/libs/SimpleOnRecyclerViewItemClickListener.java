@@ -1,9 +1,9 @@
-package com.ericluapp.android.libs;
+package com.ericluapp.libs;
 
 
 import android.view.View;
 
-import com.ericluapp.android.libs.R;
+import com.ericluapp.libs.R;
 
 public class SimpleOnRecyclerViewItemClickListener implements OnRecyclerViewItemClickListener {
     @Override

@@ -1,4 +1,4 @@
-package com.ericluapp.android.libs;
+package com.ericluapp.libs;
 
 import android.app.Activity;
 import android.app.Application;

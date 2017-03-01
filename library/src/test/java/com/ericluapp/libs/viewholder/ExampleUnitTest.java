@@ -1,4 +1,4 @@
-package com.ericluapp.android.libs.viewholder;
+package com.ericluapp.libs.viewholder;
 
 import org.junit.Test;
 

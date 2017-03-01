@@ -1,4 +1,4 @@
-package com.ericluapp.android.viewholderdemo;
+package com.ericluapp.viewholderdemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.ericluapp.android.libs.OnRecyclerViewItemClickListener;
-import com.ericluapp.android.libs.SimpleOnRecyclerViewItemClickListener;
-import com.ericluapp.android.libs.ViewHolder;
+import com.ericluapp.libs.OnRecyclerViewItemClickListener;
+import com.ericluapp.libs.SimpleOnRecyclerViewItemClickListener;
+import com.ericluapp.libs.ViewHolder;
 
 public class MainActivity extends AppCompatActivity {
 
