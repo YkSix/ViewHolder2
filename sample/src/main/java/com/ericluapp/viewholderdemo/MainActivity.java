@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MyAdapter mMyAdapter;
 
+    // No need to create any custom *ItemClickListener
     private OnRecyclerViewItemClickListener mListener = new SimpleOnRecyclerViewItemClickListener() {
         @Override
         public void onItemClick(ViewHolder holder, int position) {
@@ -72,12 +73,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            // mListener: the item click listener.
             return new MyViewHolder(R.layout.item_simple, parent, mListener);
         }
 
         @Override
         public void onBindViewHolder(MyViewHolder holder, int position) {
             holder.setText(R.id.btn_button, position + "");
+            // mListener: the view click listener.
             holder.setOnClickListener(R.id.btn_button, mListener);
             holder.loadUrl(R.id.iv_image, IMAGES[position % IMAGES.length]);
         }
