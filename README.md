@@ -5,8 +5,24 @@
 ## Advantages
 
  * No need to create custom `RecyclerView.ViewHolder` anymore.
- * No need to create custom OnItemClickListener anymore.
- * This may be the last ViewHolder class you need. 
+ * No need to create custom OnItemClickListener anymore, the only interface for click listener is:
+ ```java
+ public interface OnRecyclerViewItemClickListener extends View.OnClickListener {
+    /**
+     * @param holder The ViewHolder of the RecyclerView item.
+     * @param position The position in which the item is clicked.
+     */
+    void onItemClick(ViewHolder holder, int position);
+
+    /**
+     * Note that the ViewHolder can be got by <code>v.getTag(R.id.tag_viewholder)</code>
+     * or using SimpleOnRecyclerViewItemClickListener#getViewHolder
+     */
+    @Override
+    void onClick(View v);
+}
+ ```
+ * This may be the last ViewHolder class you would need.
 
 ## Download
 
