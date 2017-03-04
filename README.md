@@ -100,6 +100,9 @@ public class MyViewHolder extends ViewHolder {
 }
 ```
 
+## Blog post
+[The last ViewHolder you may need][1]
+
 ## Screenshot
 
 ![](sample/screenshot/viewholder_sample.jpg)
@@ -115,3 +118,5 @@ Adding these member variables and binding them one time is not so bad. But once 
 The ViewHolder class provides a more elegant way to bind data to `RecyclerView`, with a lot less code and less room for error.
 
 Save your time. Save your code. Save your sanity.
+
+[1]: https://medium.com/@ericluapp/the-last-viewholder-you-may-need-4e4ce46efcae
