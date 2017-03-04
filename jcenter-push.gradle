@@ -1,8 +1,7 @@
 publish {
     userOrg = "ericlu"
-    // userOrg = "ericluapp"
     groupId = "com.ericluapp.libs"
-    artifactId = "viewholder-test2"
+    artifactId = "viewholder"
     publishVersion = "0.0.2"
     desc = "The last ViewHolder you need."
     website = "https://github.com/YkSix/ViewHolder2"

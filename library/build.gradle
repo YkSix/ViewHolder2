@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 group = 'com.ericluapp.libs'
-version = "0.0.1"
+version = "0.0.2"
 def lib_version_name = version
-def lib_artifact_Id = "viewholder2"
+def lib_artifact_Id = "viewholder"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
