@@ -1,10 +1,10 @@
 publish {
-    userOrg = "yksix3"
+    userOrg = "ericlu"
     // userOrg = "ericluapp"
-    groupId = "com.ericluapp.android.libs"
-    artifactId = "viewholder"
-    publishVersion = "0.1.0"
+    groupId = "com.ericluapp.libs"
+    artifactId = "viewholder-test2"
+    publishVersion = "0.0.2"
     desc = "The last ViewHolder you need."
-    website = "https://github.com/YkSix/ViewHolder"
+    website = "https://github.com/YkSix/ViewHolder2"
     dryRun = false
 }

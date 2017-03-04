@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.ericluapp.libs'
 version = "0.0.1"
 def lib_version_name = version
@@ -38,6 +36,8 @@ android {
 }
 
 // apply from: '../gradle-mvn-push.gradle'
+apply plugin: 'com.novoda.bintray-release'
+apply from: '../jcenter-push.gradle'
 
 // apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 // apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
@@ -64,42 +64,42 @@ artifacts {
     archives generateSourcesJar
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+// Properties properties = new Properties()
+// properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+// bintray {
+//     user = properties.getProperty("bintray.user")
+//     key = properties.getProperty("bintray.apikey")
 
-    pkg {
-        userOrg = "ericlu"
-        repo = 'maven'
-        name = lib_artifact_Id
+//     pkg {
+//         userOrg = "ericlu"
+//         repo = 'maven'
+//         name = lib_artifact_Id
 
-        version {
-            name = "${lib_version_name}-release"
-            desc = "The last ViewHolder."
-            vcsTag = lib_version_name
-        }
+//         version {
+//             name = "${lib_version_name}-release"
+//             desc = "The last ViewHolder."
+//             vcsTag = lib_version_name
+//         }
 
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/YkSix/ViewHolder2.git'
-        websiteUrl = 'https://github.com/YkSix/ViewHolder2'
-        publish = true
-    }
+//         licenses = ['Apache-2.0']
+//         vcsUrl = 'https://github.com/YkSix/ViewHolder2.git'
+//         websiteUrl = 'https://github.com/YkSix/ViewHolder2'
+//         publish = true
+//     }
 
-    configurations = ['archives']
-}
+//     configurations = ['archives']
+// }
 
-install {
-    repositories.mavenInstaller {
-        pom {
-            project {
-                artifactId lib_artifact_Id
-            }
-        }
-    }
-}
+// install {
+//     repositories.mavenInstaller {
+//         pom {
+//             project {
+//                 artifactId lib_artifact_Id
+//             }
+//         }
+//     }
+// }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
